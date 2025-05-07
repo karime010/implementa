@@ -111,4 +111,4 @@ while running:
 
 # Cierra pygame
 pygame.quit()
-sys.exit() 
+sys.exit()
