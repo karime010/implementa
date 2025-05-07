@@ -6,23 +6,22 @@ import random
 pygame.init()
 
 # Configura la ventana
-screen = pygame.display.set_mode((800, 600))
+screen = pygame.display.set_mode((500, 700))
 pygame.display.set_caption("Juego de Ahorcado")
 
 # Colores
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 
-# Cargar las imágenes del ahorcado (parte por parte del cuerpo)
 imagen_ahorcado = [
-    pygame.image.load("imagenes/sin_intentos.jpg"),  # Sin intentos fallidos
-    pygame.image.load("imagenes/cabeza.jpg"),        # 1er intento fallido
-    pygame.image.load("imagenes/torso.jpg"),         # 2do intento fallido
-    pygame.image.load("imagenes/pierna_izq.jpg"),    # 3er intento fallido
-    pygame.image.load("imagenes/pierna_der.jpg"),    # 4to intento fallido
-    pygame.image.load("imagenes/brazo_izq.jpg"),     # 5to intento fallido
-    pygame.image.load("imagenes/brazo_der.jpg"),     # 6to intento fallido
-    pygame.image.load("imagenes/cuerpo_completo.jpg"), # 7mo intento fallido (última imagen)
+    pygame.transform.scale(pygame.image.load("imagenes/estructura.jpg"), (200, 300)),
+    pygame.transform.scale(pygame.image.load("imagenes/cabeza.jpg"), (200, 300)),
+    pygame.transform.scale(pygame.image.load("imagenes/torso.jpg"), (200, 300)),
+    pygame.transform.scale(pygame.image.load("imagenes/brazoderecho.jpg"), (200, 300)),
+    pygame.transform.scale(pygame.image.load("imagenes/brazoizquierdo.jpg"), (200, 300)),
+    pygame.transform.scale(pygame.image.load("imagenes/piernaderecha.jpg"), (200, 300)),
+    pygame.transform.scale(pygame.image.load("imagenes/piernaizquierda.jpg"), (200, 300)),
+    pygame.transform.scale(pygame.image.load("imagenes/etapafinal.jpg"), (200, 300)),
 ]
 
 # Lista de palabras para adivinar
@@ -112,4 +111,4 @@ while running:
 
 # Cierra pygame
 pygame.quit()
-sys.exit()
+sys.exit() 
